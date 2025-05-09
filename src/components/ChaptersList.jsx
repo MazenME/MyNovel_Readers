@@ -7,7 +7,7 @@ export default function ChaptersList() {
 
   function textCut(str) {
     if (str.length > length) {
-      return  str.substring(0, 220) ;
+      return str.substring(0, 220);
     }
     return str;
   }
@@ -32,17 +32,14 @@ export default function ChaptersList() {
           <div key={chapter.id} className="chapter">
             <Link to={`/read/${chapter.id}`}>
               <div className="chapter-card">
-                <img src="src/assets/IMG_20250424_162513.jpg" alt="HERO" />
+                <img src="/assets/IMG_20250424_162513.jpg" alt="HERO" />
                 <div className="chapter-info">
                   <div className="title">
                     <h2>{chapter.title} </h2>
                     <p>-</p>
                     <p> {chapter.chapter_number}</p>
                   </div>
-                  <p>
-                   {textCut(chapter.content)}
-                  </p>
-                   
+                  <p>{textCut(chapter.content)}</p>
                 </div>
               </div>
             </Link>
