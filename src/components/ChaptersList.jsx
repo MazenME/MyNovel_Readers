@@ -7,7 +7,7 @@ export default function ChaptersList() {
 
   function textCut(str) {
     if (str.length > length) {
-      return str.substring(0, 220);
+      return str.substring(0, 190);
     }
     return str;
   }
