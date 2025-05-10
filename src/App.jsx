@@ -1,8 +1,8 @@
 import ChaptersList from "./components/ChaptersList.jsx";
 import Navbar from "./components/Navbar";
-import Footer from "./components/footer.jsx";
+import Footer from "./components/Footer.jsx";
 import Reader from "./components/Reader.jsx";
-import About from "./components/about.jsx"
+import About from "./components/About.jsx"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
