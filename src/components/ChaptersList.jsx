@@ -4,10 +4,11 @@ import { supabase } from "../supabaseClient";
 
 export default function ChaptersList() {
   const [chapters, setChapters] = useState([]);
+  const [sortOrder, setSortOrder] = useState("asc");
 
   function textCut(str) {
-    if (str.length > length) {
-      return str.substring(0, 190);
+    if (str.length > 190) {
+      return str.substring(0, 190) + "...";
     }
     return str;
   }
@@ -17,16 +18,20 @@ export default function ChaptersList() {
       const { data } = await supabase
         .from("chapters")
         .select("id, title, chapter_number, content")
-        .order("chapter_number", { ascending: true });
+        .order("chapter_number", { ascending: sortOrder === "asc" });
 
       setChapters(data);
     };
 
     fetchChapters();
-  }, []);
+  }, [sortOrder]);
 
   return (
     <div className="chapters-list">
+      <div className="sort-buttons" style={{ textAlign: "center", margin: "1rem" }}>
+        <button onClick={() => setSortOrder("asc")}>⬆️</button>
+        <button onClick={() => setSortOrder("desc")} style={{ marginLeft: "1rem" }}>⬇️</button>
+      </div>
       <div className="chapters">
         {chapters.map((chapter) => (
           <div key={chapter.id} className="chapter">

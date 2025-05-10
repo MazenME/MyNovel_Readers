@@ -5,6 +5,18 @@
   text-decoration: none;
 }
 
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -164,5 +176,130 @@ h1 {
 }
 
 
+/* src/styles/navbar.css */
+.navbar {
+  background-color: #1f1f1f;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #b11111;
+}
+
+.navbar-logo a {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* src/styles/footer.css */
+.footer {
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
 
 
+.footer nav {
+  margin-top: 0.5rem;
+}
+
+.footer a {
+  color: #f0f0f0cb;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #a40f0f;
+}
+
+/* src/styles/about.css */
+.about-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-page h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-page h2 {
+  margin-top: 2rem;
+  color: #555;
+}
+
+.about-page p, .about-page li {
+  line-height: 1.7;
+  color: #333;
+}
+
+.about-page ul {
+  padding-left: 1.2rem;
+}
+
+.about-page a {
+  color: #8f0b0b;
+  text-decoration: none;
+}
+
+.about-page a:hover {
+  text-decoration: underline;
+}
+.sort-buttons {
+  text-align: center;
+  margin: 1rem;
+}
+
+.sort-buttons button {
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.sort-buttons button:hover {
+  background-color: #721212;
+}
+
+.sort-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #a02c2c55;
+}
