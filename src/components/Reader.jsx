@@ -89,7 +89,7 @@ function Reader() {
         </div>
         <p style={{ fontSize: `${fontSize}px` }}>{chapter.content}</p>
         <div className="viewers-counter">
-            <p>عدد المشاهدات: {chapter.viewers_counter}</p>
+            {/* <p>عدد المشاهدات: {chapter.viewers_counter}</p> */}
         </div>
         <div className="navigation-buttons">
           <button
