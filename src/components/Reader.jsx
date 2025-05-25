@@ -1,7 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../supabaseClient";
-import DOMPurify from "dompurify";
 
 function Reader() {
   const { id } = useParams();
